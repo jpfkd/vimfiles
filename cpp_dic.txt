@@ -81,7 +81,6 @@ mutable
 mutex
 namespace
 new
-new
 noexcept
 not
 not_eq
