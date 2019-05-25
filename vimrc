@@ -64,6 +64,7 @@ set ttimeout
 set ttimeoutlen=100
 set undofile
 set undoreload=-1
+set updatetime=100
 set wildignore+=*.o,*.obj,*.d
 set wildmenu
 set wildmode=longest:full,full
