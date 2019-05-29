@@ -17,4 +17,4 @@ nnoremap <X1Mouse> <C-o>
 nnoremap <X2Mouse> <C-i>
 
 colorscheme desert
-silent! colorscheme gruvbox
+colorscheme gruvbox8

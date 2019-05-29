@@ -235,8 +235,8 @@ let g:ale_c_parse_makefile = 1
 
 " Colorscheme
 if &t_Co >= 256
-  silent! colorscheme gruvbox
   set background=dark
+  colorscheme gruvbox8
 endif
 
 " Maybe this better be the last
