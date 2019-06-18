@@ -52,6 +52,7 @@ set shortmess=a
 set showcmd
 set showmatch
 set sidescroll=1
+set signcolumn=yes
 set smartcase
 set softtabstop=-1
 set switchbuf=useopen,usetab
@@ -225,7 +226,6 @@ endif
 
 " ALE settings
 let g:ale_set_highlights = 0
-let g:ale_sign_column_always = 1
 let g:ale_echo_msg_format = '%code: %%s - %linter%'
 
 let g:ale_linters_ignore = {'cpp': ['clazy', 'gcc', 'clang', 'clangcheck']}
