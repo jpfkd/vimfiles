@@ -21,7 +21,6 @@ set fileformats+=mac
 set formatoptions+=nmBj
 set helplang=en
 set history=10000
-set hlsearch
 set ignorecase
 set iminsert=0
 set imsearch=-1
@@ -35,6 +34,7 @@ set matchpairs+=<:>
 set matchtime=1
 set mouse=a
 set nobackup
+set nohlsearch
 set nojoinspaces
 set nolinebreak
 set nonumber
