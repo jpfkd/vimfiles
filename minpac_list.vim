@@ -1,6 +1,7 @@
 " Plugins loaded on start
 call minpac#add('Chiel92/vim-autoformat')
 call minpac#add('airblade/vim-gitgutter')
+call minpac#add('alvan/vim-closetag')
 call minpac#add('chrisbra/vim_faq')
 call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('junegunn/vim-easy-align')
