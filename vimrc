@@ -204,10 +204,6 @@ nnoremap <F12> :<C-U>MinpacUpdate<CR>
 " vim-autoformat settings
 let g:autoformat_autoindent = 0
 noremap <F9> :Autoformat<CR>
-augroup vimrc_autoformat
-  autocmd!
-  au BufWrite * Autoformat
-augroup END
 
 " sort-words settings
 vmap gs <Plug>(SortWords)
