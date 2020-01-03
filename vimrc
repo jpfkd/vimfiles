@@ -66,7 +66,7 @@ set ttimeoutlen=100
 set undofile
 set undoreload=-1
 set updatetime=100
-set viminfofile=.viminfo
+set viminfofile=~/.viminfo
 set wildignore+=*.o,*.obj,*.d
 set wildmenu
 set wildmode=longest:full,full
