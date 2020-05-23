@@ -116,7 +116,7 @@ noremap <C-L> $
 noremap <C-K> {
 noremap <C-J> }
 
-vnoremap s :sort<CR>
+vnoremap S :sort<CR>
 
 " Mappings for QuickFix/Location List.
 nnoremap <F2> :<C-U>cwindow<CR>
