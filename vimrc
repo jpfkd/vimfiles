@@ -230,6 +230,10 @@ let g:ale_linters_ignore = {'cpp': ['clangd']}
 let g:ale_c_parse_compile_commands = 1
 let g:ale_c_parse_makefile = 1
 
+" vim-sandwich settings
+packadd vim-sandwich
+call operator#sandwich#set('all', 'all', 'highlight', 0)
+
 " Colorscheme
 if &t_Co >= 256
   set background=dark
