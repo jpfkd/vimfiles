@@ -30,7 +30,7 @@ set incsearch
 set isfname-==
 set laststatus=2
 set list
-set listchars=eol:$,tab:>-,space:·,extends:@,precedes:@,nbsp:+
+set listchars=eol:$,tab:>-,space:.,extends:@,precedes:@,nbsp:+
 set makeencoding=default
 set matchpairs+=<:>
 set matchtime=1
