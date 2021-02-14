@@ -3,6 +3,8 @@ set lines=36
 
 if has('win32') || has('win64')
   set guifont=Consolas:h13
+elseif has('mac')
+  set guifont=Monaco:h14
 elseif has('unix')
   set guifont=Inconsolata\ 13
 endif
