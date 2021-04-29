@@ -245,3 +245,4 @@ endif
 " Maybe this better be the last
 filetype plugin indent on
 syntax enable
+set secure
