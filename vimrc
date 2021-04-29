@@ -5,7 +5,7 @@ set encoding=utf-8
 
 let $VIMHOMEDIR = $HOME . '/' . (has('unix') ? '.vim' : 'vimfiles')
 
-" Ordinary options
+" Options
 set autoindent
 set autoread
 set backspace=
@@ -46,7 +46,6 @@ set omnifunc=syntaxcomplete#Complete
 set pumheight=10
 set relativenumber
 set scrolloff=0
-set secure
 set sessionoptions+=unix,slash
 set shiftround
 set shiftwidth=2
@@ -242,7 +241,7 @@ if &t_Co >= 256
   colorscheme gruvbox8
 endif
 
-" Maybe this better be the last
+" These should be the last
 filetype plugin indent on
 syntax enable
 set secure
