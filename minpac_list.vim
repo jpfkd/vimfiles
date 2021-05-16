@@ -1,4 +1,5 @@
 " Plugins loaded on start
+call minpac#add('AndrewRadev/switch.vim')
 call minpac#add('Chiel92/vim-autoformat')
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('alvan/vim-closetag')

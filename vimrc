@@ -235,6 +235,13 @@ let g:ale_c_parse_makefile = 1
 packadd vim-sandwich
 call operator#sandwich#set('all', 'all', 'highlight', 0)
 
+" switch settings
+packadd switch.vim
+let g:switch_custom_definitions =
+      \ [
+      \   switch#NormalizedCase(['true', 'false']),
+      \ ]
+
 " Colorscheme
 if &t_Co >= 256
   set background=dark
