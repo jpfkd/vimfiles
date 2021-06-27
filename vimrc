@@ -48,7 +48,7 @@ set relativenumber
 set scrolloff=0
 set sessionoptions+=unix,slash
 set shiftround
-set shiftwidth=2
+set shiftwidth=4
 set shortmess=a
 set showcmd
 set showmatch
