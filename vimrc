@@ -88,22 +88,22 @@ set statusline+=col.%v\ lin.%l/%L
 " From archlinux.vim
 " Move temporary files to a secure location to protect against CVE-2017-1000382
 if exists('$XDG_CACHE_HOME')
-  let &directory=$XDG_CACHE_HOME
+    let &directory=$XDG_CACHE_HOME
 else
-  let &directory=$HOME . '/.cache'
+    let &directory=$HOME . '/.cache'
 endif
 let &undodir=&directory . '/vim/undo//'
 let &backupdir=&directory . '/vim/backup//'
 let &directory.='/vim/swap//'
 " Create directories if they doesn't exist
 if !isdirectory(expand(&directory))
-  call mkdir(expand(&directory), 'p', 0700)
+    call mkdir(expand(&directory), 'p', 0700)
 endif
 if !isdirectory(expand(&backupdir))
-  call mkdir(expand(&backupdir), 'p', 0700)
+    call mkdir(expand(&backupdir), 'p', 0700)
 endif
 if !isdirectory(expand(&undodir))
-  call mkdir(expand(&undodir), 'p', 0700)
+    call mkdir(expand(&undodir), 'p', 0700)
 endif
 
 " Mappings
@@ -153,52 +153,52 @@ noreabbrev amke make
 
 " Auto commands
 augroup vimrc
-  autocmd!
-  au QuickFixCmdPost * cwindow
+    autocmd!
+    au QuickFixCmdPost * cwindow
 
-  au FileType vim,help setl keywordprg=:help
+    au FileType vim,help setl keywordprg=:help
 
-  au FileType c,cpp setl cinoptions=g0.5s,h0.5s,N-s,E-s,i2s,+2s,(0,u0,W2s
-  au FileType c,cpp setl commentstring=//%s
-  au FileType c,cpp setl dictionary+=$VIMHOMEDIR/c_dic.txt
-  au FileType cpp setl dictionary+=$VIMHOMEDIR/cpp_dic.txt
+    au FileType c,cpp setl cinoptions=g0.5s,h0.5s,N-s,E-s,i2s,+2s,(0,u0,W2s
+    au FileType c,cpp setl commentstring=//%s
+    au FileType c,cpp setl dictionary+=$VIMHOMEDIR/c_dic.txt
+    au FileType cpp setl dictionary+=$VIMHOMEDIR/cpp_dic.txt
 
-  au FileType php nnoremap <buffer> <F7> :<C-u>!php %<CR>
+    au FileType php nnoremap <buffer> <F7> :<C-u>!php %<CR>
 
-  au FileType cs nnoremap <buffer> <F7> :<C-u>!dotnet run<CR>
+    au FileType cs nnoremap <buffer> <F7> :<C-u>!dotnet run<CR>
 
-  " From defaults.vim, modified not to change jumplist.
-  " When editing a file, always jump to the last known cursor position. Don't
-  " do it when the position is invalid, when inside an event handler (happens
-  " when dropping a file on gvim) and for a commit message (it's likely a
-  " different one than last time).
-  au BufReadPost *
-        \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
-        \ |   exe "normal! g'\""
-        \ | endif
+    " From defaults.vim, modified not to change jumplist.
+    " When editing a file, always jump to the last known cursor position. Don't
+    " do it when the position is invalid, when inside an event handler (happens
+    " when dropping a file on gvim) and for a commit message (it's likely a
+    " different one than last time).
+    au BufReadPost *
+                \ if line("'\"") >= 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+                \ |   exe "normal! g'\""
+                \ | endif
 augroup END
 
 " Plugin settings
 
 " plugins included in vim runtime
 if !has('nvim')
-  packadd! matchit
-  packadd! termdebug
+    packadd! matchit
+    packadd! termdebug
 endif
 
 " minpac settings
 packadd minpac
 function s:LoadMinpac() abort
-  call minpac#init()
-  call minpac#add('k-takata/minpac', {'type': 'opt'})
+    call minpac#init()
+    call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-  " Plugins are listed in separate file so you don't have to reload vimrc after
-  " editing the plugin list
-  runtime minpac_list.vim
+    " Plugins are listed in separate file so you don't have to reload vimrc after
+    " editing the plugin list
+    runtime minpac_list.vim
 endfunction
 
 command! MinpacUpdate call s:LoadMinpac()
-      \ | call minpac#update('', {'do': {-> minpac#status({'open': 'horizontal'})}})
+            \ | call minpac#update('', {'do': {-> minpac#status({'open': 'horizontal'})}})
 command! MinpacClean  call s:LoadMinpac() | call minpac#clean()
 
 nnoremap <F12> :<C-U>MinpacUpdate<CR>
@@ -219,7 +219,7 @@ nmap <leader>a <Plug>(EasyAlign)
 
 " vim-man setttings
 if executable('man') == 1
-  set keywordprg=:Man
+    set keywordprg=:Man
 endif
 
 " ALE settings
@@ -237,17 +237,16 @@ call operator#sandwich#set('all', 'all', 'highlight', 0)
 
 " switch settings
 packadd switch.vim
-let g:switch_custom_definitions =
-      \ [
-      \   switch#NormalizedCase(['true', 'false']),
-      \   switch#NormalizedCase(['on', 'off']),
-      \   switch#NormalizedCase(['enable', 'disable']),
-      \ ]
+let g:switch_custom_definitions = [
+            \   switch#NormalizedCase(['true', 'false']),
+            \   switch#NormalizedCase(['on', 'off']),
+            \   switch#NormalizedCase(['enable', 'disable']),
+            \ ]
 
 " Colorscheme
 if &t_Co >= 256
-  set background=dark
-  colorscheme gruvbox8
+    set background=dark
+    colorscheme gruvbox8
 endif
 
 " These should be the last
