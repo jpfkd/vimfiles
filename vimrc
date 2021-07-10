@@ -223,12 +223,8 @@ if executable('man') == 1
 endif
 
 " ALE settings
-let g:ale_set_highlights = 0
 let g:ale_echo_msg_format = '%code: %%s - %linter%'
 
-let g:ale_linters_ignore = {'cpp': ['clangd']}
-
-let g:ale_c_parse_compile_commands = 1
 let g:ale_c_parse_makefile = 1
 
 " vim-sandwich settings
