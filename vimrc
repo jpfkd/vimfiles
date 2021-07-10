@@ -1,6 +1,5 @@
+" First things first
 scriptencoding utf-8
-
-" This better be the first
 set encoding=utf-8
 
 let $VIMHOMEDIR = $HOME . '/' . (has('unix') ? '.vim' : 'vimfiles')
@@ -32,6 +31,7 @@ set laststatus=2
 set list
 set listchars=eol:$,tab:>-,space:.,extends:@,precedes:@,nbsp:+
 set makeencoding=default
+set makeprg=ninja
 set matchpairs+=<:>
 set matchtime=1
 set mouse=a
