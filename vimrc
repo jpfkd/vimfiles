@@ -8,7 +8,6 @@ let $VIMHOMEDIR = $HOME . '/' . (has('unix') ? '.vim' : 'vimfiles')
 set autoindent
 set autoread
 set backspace=
-set cinoptions=g0.5s,h0.5s,N-s,E-s,i2s,+2s,(0,u0,W2s
 set clipboard=
 set cmdheight=2
 set colorcolumn=+2
