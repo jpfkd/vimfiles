@@ -8,6 +8,7 @@ let $VIMHOMEDIR = $HOME . '/' . (has('unix') ? '.vim' : 'vimfiles')
 set autoindent
 set autoread
 set backspace=
+set cinoptions=g0.5s,h0.5s,N-s,E-s,i2s,+2s,(0,u0,W2s
 set clipboard=
 set cmdheight=2
 set colorcolumn=+2
@@ -157,11 +158,6 @@ augroup vimrc
     au QuickFixCmdPost * cwindow
 
     au FileType vim,help setl keywordprg=:help
-
-    au FileType c,cpp setl cinoptions=g0.5s,h0.5s,N-s,E-s,i2s,+2s,(0,u0,W2s
-    au FileType c,cpp setl commentstring=//%s
-    au FileType c,cpp setl dictionary+=$VIMHOMEDIR/c_dic.txt
-    au FileType cpp setl dictionary+=$VIMHOMEDIR/cpp_dic.txt
 
     au FileType php nnoremap <buffer> <F7> :<C-u>!php %<CR>
 
