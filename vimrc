@@ -158,11 +158,6 @@ augroup vimrc
 
     au FileType vim,help setl keywordprg=:help
 
-    au FileType c,cpp setl cinoptions=g0.5s,h0.5s,N-s,E-s,i2s,+2s,(0,u0,W2s
-    au FileType c,cpp setl commentstring=//%s
-    au FileType c,cpp setl dictionary+=$VIMHOMEDIR/c_dic.txt
-    au FileType cpp setl dictionary+=$VIMHOMEDIR/cpp_dic.txt
-
     au FileType php nnoremap <buffer> <F7> :<C-u>!php %<CR>
 
     au FileType cs nnoremap <buffer> <F7> :<C-u>!dotnet run<CR>
