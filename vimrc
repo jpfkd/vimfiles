@@ -31,7 +31,6 @@ set laststatus=2
 set list
 set listchars=eol:$,tab:>-,space:.,extends:@,precedes:@,nbsp:+
 set makeencoding=default
-set makeprg=ninja\ -C\ build
 set matchpairs+=<:>
 set matchtime=1
 set mouse=a
