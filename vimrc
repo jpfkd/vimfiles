@@ -71,11 +71,9 @@ set wildignore+=*.o,*.obj,*.d
 set wildmenu
 set wildmode=longest:full,full
 
-" These options do not exist in some poppular versions of vim. So no warning
-" when failed to set
-silent! set cryptmethod=blowfish2
-silent! set inccommand=nosplit
-silent! set nolangremap
+if has('langmap')
+    set nolangremap
+endif
 
 " Settings for statusline (separated for readability)
 set statusline=%f
