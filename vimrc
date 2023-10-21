@@ -44,7 +44,7 @@ set nrformats-=octal,alpha
 set omnifunc=syntaxcomplete#Complete
 set pumheight=10
 set relativenumber
-set scrolloff=0
+set scrolloff=5
 set sessionoptions+=unix,slash
 set shiftround
 set shiftwidth=4
