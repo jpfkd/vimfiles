@@ -69,7 +69,7 @@ set updatetime=100
 set viminfofile=$VIMHOMEDIR/viminfo
 set wildignore+=*.o,*.obj,*.d
 set wildmenu
-set wildmode=longest:full,full
+set wildmode=full
 
 if has('langmap')
     set nolangremap
