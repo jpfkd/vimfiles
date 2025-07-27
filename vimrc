@@ -178,6 +178,11 @@ if !has('nvim')
     packadd! termdebug
 endif
 
+" netrw settings
+let g:netrw_liststyle = 1
+let g:netrw_sizestyle = "H"
+let g:netrw_timefmt="%Y/%m/%d %H:%M:%S"
+
 " minpac settings
 packadd minpac
 function s:LoadMinpac() abort
